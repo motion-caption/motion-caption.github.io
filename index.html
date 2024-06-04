@@ -1,1 +1,227 @@
-hello
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LVBench </title>
+
+    <link rel="icon" href="./static/images/lvbench.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/leaderboard.css">
+    <link rel="stylesheet" href="./static/css/video-player.css">
+
+
+    <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/explorer-index.js"></script>
+    <script src="./static/js/question_card.js"></script>
+
+    <script src="./static/js/leaderboard_testmini.js"></script>
+    <script src="./data/results/output_folders.js" defer></script>
+    <script src="./data/results/model_scores.js" defer></script>
+
+    <script src="./visualizer/data/data_public.js" defer></script>
+</head>
+<body>
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <p style="font-size:18px; display: inline; margin-right: -2px; margin-top: 12px;">🔥</p>
+                <a class="navbar-link">
+                    More Research
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://github.com/THUDM/CogVLM2">
+                        <b>CogVLM2</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title is-bold">
+                        <img src="static/images/lvbench.png" style="width:1.6em;vertical-align: middle" alt="Logo"/>
+                        <span class="video-mme" style="vertical-align: middle">LVBench</span>
+                    </h1>
+                    <h2 class="subtitle is-3 publication-subtitle" , style="margin-bottom: 20px;">
+                        An Extreme Long Video Understanding Benchmark
+                    </h2>
+
+                    <div class="is-size-5 publication-authors" , style="width: 80%; margin: 20px auto;" ,>
+
+                        <span class="author-block" , style="font-size:24px"><a href="https://github.com/THUDM/LVBench">LVBench Team</a></span>
+
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
+                   class="external-link button is-normal is-rounded is-dark"> -->
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                <a href="https://github.com/THUDM/LVBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+                            <!-- Dataset Link. -->
+                            <span class="link-block">
+                <a href="https://github.com/THUDM/LVBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">📊</p>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+                            <!-- Leaderboard Link. -->
+                            <span class="link-block">
+                <a href="#leaderboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🏆</p>
+                  </span>
+                  <span>Leaderboard</span>
+                </a>
+              </span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Introduction</h2>
+                <div class="content has-text-justified">
+                    Recent progress in multimodal large language models has markedly enhanced the understanding of short
+                    videos (typically under one minute), and several evaluation datasets have emerged accordingly.
+                    However, these advancements fall short of meeting the demands of real-world applications such as
+                    embodied intelligence for long-term decision-making, in-depth movie reviews and discussions, and
+                    live sports commentary, all of which require comprehension of long videos spanning several hours. To
+                    address this gap, we introduce LVBench, a benchmark specifically designed for long video
+                    understanding. Our dataset comprises publicly sourced videos, including TV series, sports
+                    broadcasts, and everyday surveillance footage, and encompasses a diverse set of tasks aimed at long
+                    video comprehension and information extraction. By leveraging a combination of manual annotations
+                    and model-assisted techniques, we have created a robust video understanding question-answer dataset.
+                    LVBench is designed to challenge multimodal models to demonstrate long-term memory and extended
+                    comprehension capabilities. Our extensive evaluations of various baseline models reveal that current
+                    multimodal large language models still underperform on these demanding long video understanding
+                    tasks. Through LVBench, we aim to spur the development of more advanced models capable of tackling the
+                    complexities of long video comprehension.
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+    <pre><code>xx
+</code></pre>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container" style="width: 60%;">
+        <style>
+            pre {
+                background-color: #f4f4f4;
+                padding: 5px; /* 调整padding为5px */
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                overflow-x: auto; /* 允许水平滚动 */
+            }
+
+            code {
+                font-family: Consolas, "Courier New", monospace;
+                color: #d63384; /* 代码文本颜色 */
+            }
+        </style>
+
+
+    </div>
+</section>
+
+
+<footer class="footer">
+    <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+        <div class="column is-8">
+            <div class="content">
+                <p style="text-align: center;">
+                    This website is adapted from <a href="https://video-mme.github.io">Video-MME</a>, licensed under a
+                    <a rel="license"
+                       href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+</footer>
+
+</body>
+</html>
+
