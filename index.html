@@ -28,11 +28,7 @@
     <script src="./static/js/explorer-index.js"></script>
     <script src="./static/js/question_card.js"></script>
 
-    <script src="./static/js/leaderboard_testmini.js"></script>
-    <script src="./data/results/output_folders.js" defer></script>
-    <script src="./data/results/model_scores.js" defer></script>
 
-    <script src="./visualizer/data/data_public.js" defer></script>
 </head>
 <body>
 
@@ -164,12 +160,104 @@
                     LVBench is designed to challenge multimodal models to demonstrate long-term memory and extended
                     comprehension capabilities. Our extensive evaluations of various baseline models reveal that current
                     multimodal large language models still underperform on these demanding long video understanding
-                    tasks. Through LVBench, we aim to spur the development of more advanced models capable of tackling the
+                    tasks. Through LVBench, we aim to spur the development of more advanced models capable of tackling
+                    the
                     complexities of long video comprehension.
                 </div>
             </div>
         </div>
         <!--/ Abstract. -->
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container">
+
+        <div class="columns is-centered">
+            <div class="column is-full has-text-centered content">
+
+                <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+                <div class="content">
+                    <p class="mt-3">Accuracy scores on LVBench.
+                    </p>
+
+                    <table class="js-sort-table" id="results">
+                        <thead>
+                        <tr>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>#</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>Model</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>Throughput</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>Date</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>Overall (%)</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>ER (%)</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>EU (%)</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>KIR (%)</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>TG (%)</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>Rea (%)</strong></th>
+                            <th rowspan="2" style="vertical-align: middle;"><strong>Sum (%)</strong></th>
+                        </tr>
+
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td><b class=""><a
+                                    href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+                                    class="ext-link" style="font-size: 16px;">Gemini 1.5 Pro</a></b></td>
+                            <td>3600</td>
+                            <td>2024-05-27</td>
+                            <td><b class="">XX</b></td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td><b class=""><a href="https://github.com/magic-research/PLLaVA" class="ext-link"
+                                               style="font-size: 16px;">PLLaVA</a></b></td>
+                            <td>16</td>
+                            <td>2024-04-25</td>
+
+                            <td><b class="">XX</b></td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td><b class=""><a href="https://openai.com/index/hello-gpt-4o/" class="ext-link"
+                                               style="font-size: 16px;">GPT-4o</a></b></td>
+                            <td>10</td>
+                            <td>2024-05-27</td>
+
+                            <td><b class="">XX</b></td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                            <td>XX</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -201,6 +289,7 @@
 
     </div>
 </section>
+
 
 
 <footer class="footer">
