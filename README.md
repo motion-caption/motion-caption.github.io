@@ -26,6 +26,8 @@ and richness in the representation of dynamic actions, as the manual labeling ca
 often missed by automated systems. The human-labeled data provides a solid foundation for training models to understand 
 and describe complex video actions.
 
+<img src="./static/images/image_caption_1.jepg" width="100%" height="50%">
+
 ### Video Caption Constructed via Unity3D
 
 The second dataset is composed of simulated data generated using the Unity3D platform. This dataset covers a wide range 
@@ -34,6 +36,8 @@ Through simulation, we can create diverse and highly controlled environments tha
 sequences, enriching the model’s training on dynamic scenes. Specifically, this dataset comprises 8,700 videos, each created
 by varying virtual backgrounds, character models, and action sequences. The dataset is paired with accurate caption data, 
 ensuring detailed and precise descriptions of the simulated actions
+
+<img src="./static/images/image_caption_2.jepg" width="100%" height="50%">
 
 ### Video Caption Constructed Based on 2D Videos
 
@@ -46,6 +50,8 @@ the model to recognize and track basic movements in simplified environments effe
 types, and movement styles makes this dataset an essential component in training the model to handle fundamental object 
 motions and interactions.
 
+<img src="./static/images/image_caption_3.jepg" width="100%" height="50%">
+
 ### Video Caption Constructed through an Automated Pipeline
 
 For the 2D and Unity3D videos, because the scenes, characters, and movements are constrained and lack generalization, we 
@@ -55,3 +61,5 @@ the video data becomes more generalized but also minimizes alterations to the or
 structure. Through this method, we processed a total of 100k videos, generating 5k videos with enriched motion information 
 integrated into their captions. This represents the most significant enhancement in our dataset, ensuring both 
 comprehensiveness and accuracy in describing video dynamics.
+
+<img src="./static/images/image_caption_4.jepg" width="100%" height="50%">
