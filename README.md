@@ -76,3 +76,19 @@ objects in each frame, and an algorithm is applied to calculate the motion infor
 co-tracker is used to analyze the camera movement, filtering out motion caused solely by camera movement, and ensuring 
 that only the absolute movement of objects is retained. Finally, the summarized motion information is integrated into the 
 original captions using GPT-4o. The The above method’s code is provided in [code](https://github.com/motion-caption/motion-caption.github.io/tree/main/code).
+
+### Code
+
+If you want to use our code to generate new captions, you need to first install YOLO-World 2, SAM2, and Co-Tracker.
+
+The above method’s code is provided in [code](https://github.com/motion-caption/motion-caption.github.io/tree/main/code).
+
+run [get_objects](https://github.com/motion-caption/motion-caption.github.io/blob/main/code/get_video_objects.py) to get the objects in the video.
+
+run [yolof_func](https://github.com/motion-caption/motion-caption.github.io/blob/main/code/yolo_func.py) to perform open-world vocabulary detection.
+
+run [sam2_func](https://github.com/motion-caption/motion-caption.github.io/blob/main/code/sam2_func.py) to track the objects in the video.
+
+run [camera_func](https://github.com/motion-caption/motion-caption.github.io/blob/main/code/camera_func.py) to get camera motion of the video.
+
+run [integrate](https://github.com/motion-caption/motion-caption.github.io/blob/main/code/integrate.py) to integrate the movement into the caption.
