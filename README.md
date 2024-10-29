@@ -4,7 +4,7 @@
 
 ## 👀 Introduce to Motion-caption
 
-We first preprocess existing datasets to ensure that the captions contain visual information and include more detailed
+We first process existing datasets to ensure that the captions contain visual information and include more detailed
 action descriptions. Additionally, we integrate multi-source data, combining human-labeled action data with virtual 
 action data generated using Unity3D. Through effective data fusion and a staged training strategy, we fine-tune existing
 large-scale video understanding models to generate captions with richer dynamic information. Experimental results 
@@ -16,7 +16,9 @@ real-world applications.
 ## Datasets
 
 In this section, we will provide a brief introduction to the construction methods of the four sub-datasets in the Motion Caption 
-Dataset
+Dataset.
+
+<img src="./static/images/distribution.png" width="100%" height="50%">
 
 ### Human-labeled Video Caption
 
